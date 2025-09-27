@@ -13,9 +13,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { register } from "@/actions/auth";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { register } from "@/actions/auth";
 
 // type RegisterFormValues = {
 //   name: string;
@@ -34,6 +34,7 @@ export default function RegisterForm() {
     },
   });
   const router = useRouter();
+
   const onSubmit = async (values: FieldValues) => {
     try {
       const res = await register(values);

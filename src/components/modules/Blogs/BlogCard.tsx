@@ -13,7 +13,7 @@ export default function BlogCard({ post }: { post: IPost }) {
           <div className="relative h-56 w-full overflow-hidden">
             <Image
               src={post?.thumbnail}
-              alt={post.title}
+              alt={post?.title}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
             />
