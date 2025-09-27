@@ -49,9 +49,9 @@ export default function LoginForm() {
     }
   };
 
-  const handleSocialLogin = (provider: "google" | "github") => {
-    console.log(`Login with ${provider}`);
-  };
+  // const handleSocialLogin = (provider: "google" | "github") => {
+  //   console.log(`Login with ${provider}`);
+  // };
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50">
@@ -117,7 +117,11 @@ export default function LoginForm() {
           <Button
             variant="outline"
             className="flex items-center justify-center gap-2"
-            onClick={() => handleSocialLogin("github")}
+            onClick={() =>
+              signIn("github", {
+                callbackUrl: "/dashboard",
+              })
+            }
           >
             {/* GitHub */}
             <Image
